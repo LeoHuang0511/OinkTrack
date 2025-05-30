@@ -36,7 +36,7 @@ Each folder under `OinkTrack` corresponds to a specific scene and lighting condi
   * `C1` and `C2` refer to different camera views .
   * `D` = Daytime, `N` = Nighttime, `DN` = Day-to-Night transition, `ND` = Night-to-Day transition.
 
-## Build a MOT-style dataset
+## Build a MOT-format dataset
 
 This repository ships a helper script, **`make_dataset.py`**, that converts the raw OinkTrack recordings ( `.ts` clips + `annotation.json`) into a standard [Dance Track(https://github.com/DanceTrack/DanceTrack) layout (`img1/`, `gt/gt.txt`, `seqinfo.ini`, 1 fps).
 
@@ -61,7 +61,7 @@ After running make_dataset.py, the following folder structure will be generated:
 project_root
 |-- make_dataset.py
 |-- OinkTrack 
-|-- dataset # generated MOT-style dataset
+|-- dataset # generated MOT-format dataset
 ~~~
 The structure of dataset/ is as follows:
 ~~~
@@ -115,7 +115,7 @@ For the tracking-by-detection models, we provide the weights of detector pre-tra
 
 We also provide model predictions on OinkTrack for direct evaluation and analysis. Download the predictions from [here](https://drive.google.com/file/d/1K908z9evHad4NPhLUZgW9bISK-x7QIaB/view?usp=sharing).
 
-Each prediction is stored in the standard MOT format `.txt` file with the following structure:
+Each prediction is stored in the standard MOT-format `.txt` file with the following structure:
 
 ```
 <frame>, <id>, <bb_left>, <bb_top>, <bb_width>, <bb_height>, <conf>, -1, -1, -1
@@ -136,8 +136,6 @@ The following GIFs illustrate sample visualizations generated from the OinkTrack
 ![OinkTrack Demo - C2DN](assets/visualized_C1DN.gif)
 ### Night-to-Day Sequence
 ![OinkTrack Demo - C2ND](assets/visualized_C1ND.gif)
-
-## Acknowledgement
 
 
 
