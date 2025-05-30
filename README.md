@@ -103,9 +103,9 @@ SPLIT: dict[str, list[str]] = {
 Save, rerun the script, and the output folders & `*_seqmap.txt` files will be regenerated accordingly.
 
 ## Evaluation
-We use [ByteTrack](https://github.com/ifzhang/ByteTrack) as an example of using DanceTrack. For training details, please see [instruction](ByteTrack/README.md). We provide the trained models in [Hugging Face](https://huggingface.co/noahcao/dancetrack_models), Google Drive (deprecated, use HuggingFance instead) or [Baidu Drive](https://pan.baidu.com/s/19O3IvYNzzrcLqlODHKYUwA) (code:awew).
+For the tracking-by-detection models, we provide the weights of detector pre-trained on OinkTrack [here]. Additionally, we also provide the weights of transformer-based models pre-trained on OinkTrack, such as MOTR[link], MeMOTR[link], MOTIP[link].
 
-To do evaluation with our provided tookit, we organize the results of validation set as follows:
+We organize the results of test set as follows:
 ~~~
 {DanceTrack ROOT}
 |-- val
