@@ -1,4 +1,10 @@
 # OinkTrack
+OinkTrack is a large-scale multi-pig tracking dataset collected from real-world commercial farms.
+
+It features over 5 hours of annotated videos across various lighting conditions (day, night, transitions), with dense groups of pigs under occlusions and appearance similarity challenges. The dataset includes 573,700 bounding boxes for 574 consistent identities, supporting research on long-term tracking and behavior analysis in precision livestock farming.
+
+<div align="center"><img src="assets/abstract.png" ></div>
+
 ## Dataset
 Download the dataset from [Google Drive](https://drive.google.com/drive/folders/1G9ygFt_G6f4SUguMmxCgKxRFgmVpmYSE?usp=drive_link).
 
