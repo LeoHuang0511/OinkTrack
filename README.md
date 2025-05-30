@@ -103,4 +103,24 @@ SPLIT: dict[str, list[str]] = {
 Save, rerun the script, and the output folders & `*_seqmap.txt` files will be regenerated accordingly.
 
 ## Evaluation
+We use [ByteTrack](https://github.com/ifzhang/ByteTrack) as an example of using DanceTrack. For training details, please see [instruction](ByteTrack/README.md). We provide the trained models in [Hugging Face](https://huggingface.co/noahcao/dancetrack_models), Google Drive (deprecated, use HuggingFance instead) or [Baidu Drive](https://pan.baidu.com/s/19O3IvYNzzrcLqlODHKYUwA) (code:awew).
+
+To do evaluation with our provided tookit, we organize the results of validation set as follows:
+~~~
+{DanceTrack ROOT}
+|-- val
+|   |-- TRACKER_NAME
+|   |   |-- dancetrack000x.txt
+|   |   |-- ...
+|   |-- ...
+~~~
+where dancetrack000x.txt is the output file of the video episode dancetrack000x, each line of which contains:
+~~~
+<frame>, <id>, <bb_left>, <bb_top>, <bb_width>, <bb_height>, <conf>, -1, -1, -1
+~~~
+
+Then, simply run the evalution code:
+```
+python3 TrackEval/scripts/run_mot_challenge.py --SPLIT_TO_EVAL val  --METRICS HOTA CLEAR Identity  --GT_FOLDER dancetrack/val --SEQMAP_FILE dancetrack/val_seqmap.txt --SKIP_SPLIT_FOL True   --TRACKERS_TO_EVAL '' --TRACKER_SUB_FOLDER ''  --USE_PARALLEL True --NUM_PARALLEL_CORES 8 --PLOT_CURVES False --TRACKERS_FOLDER val/TRACKER_NAME 
+```
 ## Demo 
