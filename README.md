@@ -136,13 +136,13 @@ python3 TrackEval/scripts/run_mot_challenge.py --SPLIT_TO_EVAL val  --METRICS HO
 The following GIFs illustrate sample visualizations generated from the OinkTrack dataset annotations:
 
 ### Daytime Sequence
-![OinkTrack Demo- C1D](assets/visualized_CD.gif)
+![OinkTrack Demo- C1D](assets/visualized_C2D.gif)
 ### Nighttime Sequence
-![OinkTrack Demo - C1N](assets/visualized_C1N.gif)
+![OinkTrack Demo - C1N](assets/visualized_C2N.gif)
 ### Dat-to-Night Sequence
-![OinkTrack Demo - C2DN](assets/visualized_C2DN.gif)
+![OinkTrack Demo - C2DN](assets/visualized_C1DN.gif)
 ### Night-to-Day Sequence
-![OinkTrack Demo - C2ND](assets/visualized_C2ND.gif)
+![OinkTrack Demo - C2ND](assets/visualized_C1ND.gif)
 
 
 
