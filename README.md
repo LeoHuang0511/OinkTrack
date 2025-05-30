@@ -38,7 +38,7 @@ Each folder under `OinkTrack` corresponds to a specific scene and lighting condi
 
 ## Build a MOT-style dataset
 
-This repository ships a helper script, **`make_dataset.py`**, that converts the raw OinkTrack recordings ( `.ts` clips + `annotation.json`) into a standard **Dance Track** layout (`img1/`, `gt/gt.txt`, `seqinfo.ini`, 1 fps).
+This repository ships a helper script, **`make_dataset.py`**, that converts the raw OinkTrack recordings ( `.ts` clips + `annotation.json`) into a standard [Dance Track(https://github.com/DanceTrack/DanceTrack) layout (`img1/`, `gt/gt.txt`, `seqinfo.ini`, 1 fps).
 
 ### 1 · Folder layout before running
 
@@ -108,11 +108,6 @@ SPLIT: dict[str, list[str]] = {
 ```
 
 Save, rerun the script, and the output folders & `*_seqmap.txt` files will be regenerated accordingly.
-
-## Evaluation
-好的，根據你前面的內容和你提供的風格，我幫你完整接續 README 這一段：
-
----
 
 ## Evaluation
 
