@@ -123,5 +123,21 @@ Then, simply run the evalution code:
 ```
 python3 TrackEval/scripts/run_mot_challenge.py --SPLIT_TO_EVAL val  --METRICS HOTA CLEAR Identity  --GT_FOLDER dancetrack/val --SEQMAP_FILE dancetrack/val_seqmap.txt --SKIP_SPLIT_FOL True   --TRACKERS_TO_EVAL '' --TRACKER_SUB_FOLDER ''  --USE_PARALLEL True --NUM_PARALLEL_CORES 8 --PLOT_CURVES False --TRACKERS_FOLDER val/TRACKER_NAME 
 ```
-## Demo 
-![OinkTrack Demo](assets/visualized_day.gif)
+很好，你已經有基本的 demo 區塊了，我幫你把整段 README 的 Demo 小節完整化，語氣正式、格式標準，直接可以放進你的 README：
+
+---
+
+## Demo
+
+The following GIFs illustrate sample visualizations generated from the OinkTrack dataset annotations:
+
+### C1D Sequence
+
+![OinkTrack Demo - C1D](assets/visualized_C1D.gif)
+
+### C2N Sequence
+
+![OinkTrack Demo - C2N](assets/visualized_C2N.gif)
+
+
+
