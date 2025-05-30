@@ -123,9 +123,6 @@ Then, simply run the evalution code:
 ```
 python3 TrackEval/scripts/run_mot_challenge.py --SPLIT_TO_EVAL val  --METRICS HOTA CLEAR Identity  --GT_FOLDER dancetrack/val --SEQMAP_FILE dancetrack/val_seqmap.txt --SKIP_SPLIT_FOL True   --TRACKERS_TO_EVAL '' --TRACKER_SUB_FOLDER ''  --USE_PARALLEL True --NUM_PARALLEL_CORES 8 --PLOT_CURVES False --TRACKERS_FOLDER val/TRACKER_NAME 
 ```
-很好，你已經有基本的 demo 區塊了，我幫你把整段 README 的 Demo 小節完整化，語氣正式、格式標準，直接可以放進你的 README：
-
----
 
 ## Demo
 
