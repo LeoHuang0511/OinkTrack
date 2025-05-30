@@ -111,7 +111,7 @@ Save, rerun the script, and the output folders & `*_seqmap.txt` files will be re
 
 ## Evaluation
 
-For the tracking-by-detection models, we provide the weights of detector pre-trained on OinkTrack. Additionally, we also provide the weights of transformer-based models pre-trained on OinkTrack, such as MOTR, MeMOTR, MOTIP. Download the dataset from [here](https://drive.google.com/file/d/1dWI9Z3Apj86bp5JRljoEy17q7cAWDn93/view?usp=sharing).
+For the tracking-by-detection models, we provide the weights of detector pre-trained on OinkTrack. Additionally, we also provide the weights of transformer-based models pre-trained on OinkTrack, such as MOTR, MeMOTR, MOTIP. Download the weights from [here](https://drive.google.com/file/d/1dWI9Z3Apj86bp5JRljoEy17q7cAWDn93/view?usp=sharing).
 
 We also provide model predictions on OinkTrack for direct evaluation and analysis. Download the predictions from [here](https://drive.google.com/file/d/1K908z9evHad4NPhLUZgW9bISK-x7QIaB/view?usp=sharing).
 
