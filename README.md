@@ -36,9 +36,9 @@ Each folder under `OinkTrack` corresponds to a specific scene and lighting condi
   * `C1` and `C2` refer to different camera views .
   * `D` = Daytime, `N` = Nighttime, `DN` = Day-to-Night transition, `ND` = Night-to-Day transition.
 
-## Build a MOT-style dataset
+## Build a MOT-format dataset
 
-This repository ships a helper script, **`make_dataset.py`**, that converts the raw OinkTrack recordings ( `.ts` clips + `annotation.json`) into a standard **MOTChallenge** layout (`img1/`, `gt/gt.txt`, `seqinfo.ini`, 1 fps).
+This repository ships a helper script, **`make_dataset.py`**, that converts the raw OinkTrack recordings ( `.ts` clips + `annotation.json`) into a standard [Dance Track(https://github.com/DanceTrack/DanceTrack) layout (`img1/`, `gt/gt.txt`, `seqinfo.ini`, 1 fps).
 
 ### 1 · Folder layout before running
 
@@ -61,7 +61,7 @@ After running make_dataset.py, the following folder structure will be generated:
 project_root
 |-- make_dataset.py
 |-- OinkTrack 
-|-- dataset # generated MOT-style dataset
+|-- dataset # generated MOT-format dataset
 ~~~
 The structure of dataset/ is as follows:
 ~~~
@@ -110,39 +110,32 @@ SPLIT: dict[str, list[str]] = {
 Save, rerun the script, and the output folders & `*_seqmap.txt` files will be regenerated accordingly.
 
 ## Evaluation
-For the tracking-by-detection models, we provide the weights of detector pre-trained on OinkTrack [here]. Additionally, we also provide the weights of transformer-based models pre-trained on OinkTrack, such as MOTR[link], MeMOTR[link], MOTIP[link].
 
-We organize the results of test set as follows:
-~~~
-{DanceTrack ROOT}
-|-- val
-|   |-- TRACKER_NAME
-|   |   |-- dancetrack000x.txt
-|   |   |-- ...
-|   |-- ...
-~~~
-where dancetrack000x.txt is the output file of the video episode dancetrack000x, each line of which contains:
-~~~
+For the tracking-by-detection models, we provide the weights of detector pre-trained on OinkTrack. Additionally, we also provide the weights of transformer-based models pre-trained on OinkTrack, such as MOTR, MeMOTR, MOTIP. Download the weights from [here](https://drive.google.com/file/d/1dWI9Z3Apj86bp5JRljoEy17q7cAWDn93/view?usp=sharing).
+
+We also provide model predictions on OinkTrack for direct evaluation and analysis. Download the predictions from [here](https://drive.google.com/file/d/1K908z9evHad4NPhLUZgW9bISK-x7QIaB/view?usp=sharing).
+
+Each prediction is stored in the standard MOT-format `.txt` file with the following structure:
+
+```
 <frame>, <id>, <bb_left>, <bb_top>, <bb_width>, <bb_height>, <conf>, -1, -1, -1
-~~~
+```
 
-Then, simply run the evalution code:
-```
-python3 TrackEval/scripts/run_mot_challenge.py --SPLIT_TO_EVAL val  --METRICS HOTA CLEAR Identity  --GT_FOLDER dancetrack/val --SEQMAP_FILE dancetrack/val_seqmap.txt --SKIP_SPLIT_FOL True   --TRACKERS_TO_EVAL '' --TRACKER_SUB_FOLDER ''  --USE_PARALLEL True --NUM_PARALLEL_CORES 8 --PLOT_CURVES False --TRACKERS_FOLDER val/TRACKER_NAME 
-```
+For evaluating the predictions, we adopt **TrackEval**, a widely used tracking evaluation toolbox. All metrics (MOTA, HOTA, IDF1, etc.) reported in our paper are computed using TrackEval.
+For more details on how to run evaluation, please refer to the [official TrackEval repository](https://github.com/JonathonLuiten/TrackEval).
 
 ## Demo
 
 The following GIFs illustrate sample visualizations generated from the OinkTrack dataset annotations:
 
 ### Daytime Sequence
-![OinkTrack Demo- C1D](assets/visualized_CD.gif)
+![OinkTrack Demo- C1D](assets/visualized_C2D.gif)
 ### Nighttime Sequence
-![OinkTrack Demo - C1N](assets/visualized_C1N.gif)
-### Dat-to-Night Sequence
-![OinkTrack Demo - C2DN](assets/visualized_C2DN.gif)
+![OinkTrack Demo - C1N](assets/visualized_C2N.gif)
+### Day-to-Night Sequence
+![OinkTrack Demo - C2DN](assets/visualized_C1DN.gif)
 ### Night-to-Day Sequence
-![OinkTrack Demo - C2ND](assets/visualized_C2ND.gif)
+![OinkTrack Demo - C2ND](assets/visualized_C1ND.gif)
 
 
 
