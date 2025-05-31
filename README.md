@@ -126,16 +126,39 @@ For more details on how to run evaluation, please refer to the [official TrackEv
 
 ## Demo
 
-The following GIFs illustrate sample visualizations generated from the OinkTrack dataset annotations:
+The following GIFs illustrate sample visualizations generated from the OinkTrack dataset annotations and demonstrate the performance of different tracking models.
 
-### Daytime Sequence
-![OinkTrack Demo- C1D](assets/visualized_C2D.gif)
-### Nighttime Sequence
-![OinkTrack Demo - C1N](assets/visualized_C2N.gif)
-### Day-to-Night Sequence
-![OinkTrack Demo - C2DN](assets/visualized_C1DN.gif)
-### Night-to-Day Sequence
-![OinkTrack Demo - C2ND](assets/visualized_C1ND.gif)
+### Groundtruth Visualizations
+
+#### Daytime / Nighttime Sequences
+<p align="center">
+  <img src="assets/visualized_C2D.gif" height="250px">
+  <img src="assets/visualized_C2N.gif" height="250px">
+</p>
+
+#### Day-to-Night / Night-to-Day Sequences
+<p align="center">
+  <img src="assets/visualized_C1DN.gif" height="250px">
+  <img src="assets/visualized_C1ND.gif" height="250px">
+</p>
+
+### Model Predictions
+
+#### ByteTrack
+<div align="center">
+  <img src="assets/predicted_ByteTrack.gif">
+</div>
+
+#### MeMOTR
+<div align="center">
+  <img src="assets/predicted_MeMOTR.gif">
+</div>
+
+#### MOTIP
+<div align="center">
+  <img src="assets/predicted_MOTIP.gif">
+</div>
+
 
 
 
