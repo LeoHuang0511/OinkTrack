@@ -6,6 +6,9 @@ It features over 5 hours of annotated videos across various lighting conditions 
 <div align="center"><img src="assets/demo.png" ></div>
 
 
+## Appendix
+Due to page limits of the paper, we provide additional supplementary materials in the [appendix](https://drive.google.com/drive/folders/1v65Y7Na0eWmqpHiVWiX_PFSGxb7wBe6Q?usp=sharing).
+
 ## Dataset
 Download the dataset from [Google Drive](https://drive.google.com/drive/folders/1G9ygFt_G6f4SUguMmxCgKxRFgmVpmYSE?usp=drive_link).
 
