@@ -170,6 +170,7 @@ The following GIFs illustrate sample visualizations generated from the OinkTrack
   <img src="assets/predicted_MOTIP.gif">
 </div>
 
-
+## Acknowledgement
+We sincerely thank Da Fong Hog for their invaluable assistance and for providing access to their facilities during the data collection phase of the OinkTrack dataset.
 
 
