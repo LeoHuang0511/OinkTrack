@@ -171,6 +171,6 @@ The following GIFs illustrate sample visualizations generated from the OinkTrack
 </div>
 
 ## Acknowledgement
-We sincerely thank Da Fong Hog for their invaluable assistance and for providing access to their facilities during the data collection phase of the OinkTrack dataset.
+We sincerely thank **Da Fong Hog Producer** for their invaluable assistance and for providing access to their facilities during the data collection phase of the OinkTrack dataset.
 
 
