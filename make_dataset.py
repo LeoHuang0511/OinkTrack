@@ -281,6 +281,6 @@ if __name__ == "__main__":
     # Write seqmap files expected by TrackEval / MOTChallenge tools
     for sp, sequences in SPLIT.items():
         if sequences:
-            (OUT_DIR / f"{sp}_seqmap.txt").write_text("\n".join(sequences))
+            (OUT_DIR/f"{sp}_seqmap.txt").write_text("name\n" + "\n".join(sequences))
 
     print("\n✅  All sequences processed successfully!  Output folder:", OUT_DIR)
